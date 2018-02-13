@@ -1,0 +1,13 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "lib/",
+        "module": "commonjs",
+        "jsx": "react",
+        "removeComments": true,
+        "experimentalDecorators": true
+    }
+}
