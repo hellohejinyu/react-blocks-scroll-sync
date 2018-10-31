@@ -1,29 +1,40 @@
 # react-blocks-scroll-sync
 
 ## Usage
-``` js
+``` jsx
 import Container from "react-blocks-scroll-sync";
 const Block = Container.Block;
-```
 
-``` jsx
-// example
-// write the following code in the render method
-
-renderBox() {
+class Demo extends React.PureComponent {
+  renderBox() {
     return new Array(100).fill(1).map((v, k) => {
-        return <div key={k} style={{
+      return (
+        <div
+          key={k}
+          style={{
             width: 200,
+            backgroundColor: '#'+ (Math.random() * 0xffffff << 0).toString(16),
             height: Math.floor(Math.random() * 300) + 200
-        }}>{k}</div>
+          }}
+        >
+          {k}
+        </div>
+      );
     })
-}
+  }
 
-<Container>
-    <Block>{this.renderBox()}</Block>
-    <Block>{this.renderBox()}</Block>
-    <Block>{this.renderBox()}</Block>
-</Container>
+  render() {
+    return (
+      <div style={{ display: 'flex' }}>
+        <Container>
+          <Block>{this.renderBox()}</Block>
+          <Block>{this.renderBox()}</Block>
+          <Block>{this.renderBox()}</Block>
+        </Container>
+      </div>
+    );
+  }
+}
 ```
 
 ![example](./docs/images/example1.gif)
