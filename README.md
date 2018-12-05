@@ -1,4 +1,5 @@
-# react-blocks-scroll-sync
+# react-blocks-scroll-sync &middot; [![npm](https://img.shields.io/npm/v/react-blocks-scroll-sync.svg)](https://www.npmjs.com/package/react-blocks-scroll-sync)
+
 
 Synchronously scrolling multiple blocks.
 
