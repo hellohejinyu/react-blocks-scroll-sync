@@ -1,6 +1,14 @@
 # react-blocks-scroll-sync
 
-## Usage
+Synchronously scrolling multiple blocks.
+
+## Install
+
+``` shell
+npm i --save react-blocks-scroll-sync
+```
+
+## Quick Overview
 ``` jsx
 import Container from "react-blocks-scroll-sync";
 const Block = Container.Block;
@@ -37,7 +45,11 @@ class Demo extends React.PureComponent {
 }
 ```
 
-![example](./docs/images/example1.gif)
+<p align="center">
+  <img src="./docs/images/example1.gif" style="border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, .2)" />
+</p>
 
-### important: every Block component children's count should be same!
+## Tips
+
+⚠️ The number of child elements of each `<Block />` component need to be same.
 

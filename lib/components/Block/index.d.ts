@@ -8,5 +8,5 @@ interface Props {
     classes: Styles;
     className?: string;
 }
-declare const _default: React.ComponentType<Pick<Props, "style" | "children" | "className"> & import("react-jss/lib/injectSheet").StyledComponentProps<"block">>;
+declare const _default: React.ComponentType<Pick<Props, "style" | "children" | "className"> & import("react-jss").StyledComponentProps<"block">>;
 export default _default;
