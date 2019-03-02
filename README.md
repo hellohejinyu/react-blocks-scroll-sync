@@ -14,6 +14,14 @@ npm i --save react-blocks-scroll-sync
 import Container from "react-blocks-scroll-sync";
 const Block = Container.Block;
 
+function color16(){
+  var r = Math.floor(Math.random()*256);
+  var g = Math.floor(Math.random()*256);
+  var b = Math.floor(Math.random()*256);
+  var color = `rgb(${r},${g},${b})`;
+  return color;
+}
+
 class Demo extends React.PureComponent {
   renderBox() {
     return new Array(100).fill(1).map((v, k) => {
@@ -22,7 +30,7 @@ class Demo extends React.PureComponent {
           key={k}
           style={{
             width: 200,
-            backgroundColor: '#'+ (Math.random() * 0xffffff << 0).toString(16),
+            backgroundColor: color16(),
             height: Math.floor(Math.random() * 300) + 200
           }}
         >

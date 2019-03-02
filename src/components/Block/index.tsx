@@ -1,6 +1,5 @@
 import React, { CSSProperties, PureComponent } from "react";
-import injectSheet from "react-jss";
-import classNames from "classnames";
+import cn from "classnames";
 
 interface Styles {
   block: string;
@@ -14,18 +13,26 @@ const styles = {
 }
 
 interface Props {
-  style?: CSSProperties,
-  children: any,
-  classes: Styles,
-  className?: string;
+  style?: CSSProperties
+  children: any
+  className?: string
 }
 
 class Block extends PureComponent<Props, {}> {
   render() {
-    const { style, children, className, classes, ...rest } = this.props;
+    const { style, children, className, ...rest } = this.props;
+    // if not have style and className props, give a default style
+    const defaultStyle = (!style && !className) ? { height: 400 } : {}
     return <div
-      className={classNames(classes.block, className, "react-scroll-sync-block")}
-      style={{ margin: 0, padding: 0, display: "block", ...style }}
+      className={cn(className, "react-scroll-sync-block")}
+      style={{
+        ...defaultStyle,
+        overflow: 'auto',
+        margin: 0,
+        padding: 0,
+        display: "block",
+        ...style
+      }}
       {...rest}
     >
       {children}
@@ -33,4 +40,4 @@ class Block extends PureComponent<Props, {}> {
   }
 }
 
-export default injectSheet(styles)(Block);
+export default Block;
