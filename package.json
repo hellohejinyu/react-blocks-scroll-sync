@@ -27,22 +27,22 @@
   },
   "homepage": "https://github.com/elowes/react-blocks-scroll-sync#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "@types/classnames": "^2.2.6",
-    "@types/react": "^16.4.18",
-    "@types/react-dom": "^16.0.9",
-    "classnames": "^2.2.6",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "@babel/polyfill": "^7.8.7",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "core-js": "^3.6.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.1.0",
-    "typescript": "^3.1.4"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "typescript": "^3.8.3"
   }
 }

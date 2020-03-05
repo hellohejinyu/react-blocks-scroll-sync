@@ -11,47 +11,49 @@ npm i --save react-blocks-scroll-sync
 
 ## Quick Overview
 ``` jsx
-import Container from "react-blocks-scroll-sync";
-const Block = Container.Block;
+import React, { useCallback } from 'react'
+import Container from 'react-blocks-scroll-sync'
 
-function color16(){
-  var r = Math.floor(Math.random()*256);
-  var g = Math.floor(Math.random()*256);
-  var b = Math.floor(Math.random()*256);
-  var color = `rgb(${r},${g},${b})`;
-  return color;
+const Block = Container.Block
+
+const randomColor = () => {
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+  const color = `rgb(${r},${g},${b})`
+  return color
 }
 
-class Demo extends React.PureComponent {
-  renderBox() {
+const App = () => {
+  const renderMultiBox = useCallback(() => {
     return new Array(100).fill(1).map((v, k) => {
       return (
         <div
           key={k}
           style={{
             width: 200,
-            backgroundColor: color16(),
+            backgroundColor: randomColor(),
             height: Math.floor(Math.random() * 300) + 200
           }}
         >
           {k}
         </div>
-      );
+      )
     })
-  }
+  }, [])
 
-  render() {
-    return (
-      <div style={{ display: 'flex' }}>
-        <Container>
-          <Block>{this.renderBox()}</Block>
-          <Block>{this.renderBox()}</Block>
-          <Block>{this.renderBox()}</Block>
-        </Container>
-      </div>
-    );
-  }
+  return (
+    <div style={{ display: 'flex' }}>
+      <Container>
+        <Block>{renderMultiBox()}</Block>
+        <Block>{renderMultiBox()}</Block>
+        <Block>{renderMultiBox()}</Block>
+      </Container>
+    </div>
+  )
 }
+
+export default App
 ```
 
 <p align="center">
